@@ -6,4 +6,19 @@ class Musica
     public string artista;
     public int duracao;
     public bool disponivel;
+
+// criando  um comportamento pra class musica
+    public void ExibirFichaTecnica()
+    {
+        Console.WriteLine($"Nome: {nome}");
+        Console.WriteLine($"Artista: {artista}");
+        Console.WriteLine($"Duracao: {duracao}");
+        if(disponivel)
+        {
+            Console.WriteLine("Disponivel no plano");
+        } else
+        {
+            System.Console.WriteLine("Adquira o pano Plus+");
+        }
+        }
 }
