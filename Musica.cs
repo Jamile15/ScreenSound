@@ -2,18 +2,20 @@
 
 class Musica
 {
-    public string nome;
-    public string artista;
-    public int duracao;
+    public string Nome { get; set;}
+    public string Artista { get; set;}
+    public int Duracao { get; set;}
     public bool Disponivel { get; set;}
+
+    public string NomeCompleto { get; set; }
 
 
 // criando  um comportamento pra class musica que vai exibir uma fixa tecninca
     public void ExibirFichaTecnica()
     {
-        Console.WriteLine($"Nome: {nome}");
-        Console.WriteLine($"Artista: {artista}");
-        Console.WriteLine($"Duracao: {duracao}");
+        Console.WriteLine($"Nome: {Nome}");
+        Console.WriteLine($"Artista: {Artista}");
+        Console.WriteLine($"Duracao: {Duracao}");
         if(Disponivel)
         {
             Console.WriteLine("Disponivel no plano");
