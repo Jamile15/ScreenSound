@@ -18,7 +18,6 @@ class Musica
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
         Console.WriteLine($"Duracao: {Duracao}");
-        Console.WriteLine($"Genero: {Genero}");
         if (Disponivel)
         {
             Console.WriteLine("Disponivel no plano");
