@@ -2,11 +2,12 @@
 
 class Albuns
 {
+    private List<Musica> musicas=new List<Musica>();
     public string Nome { get; set; }
     public int Duracao { get; set; }
 
-    public void AficionadoMusica( Musica musica);
+    public void AdicionarMusica(Musica musica)
     {
-
+        musicas.Add(musica);
     }
 }
