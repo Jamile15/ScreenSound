@@ -23,11 +23,25 @@
 Albuns albunDoQueen = new Albuns();
 albunDoQueen.Nome = "A night at the opera";
 
+Genero generoMusica1 = new Genero();
+generoMusica1.Nome = "Mista";
+
+Genero generoMusica2 = new Genero();
+generoMusica2.Nome = "Pesada";
+
 Musica musica1 = new Musica();
 musica1.Nome = "Love of my life";
+musica1.Duracao = 213;
+musica1.Genero = generoMusica1;
+
 
 Musica musica2 = new Musica();
 musica2.Nome = "Bohemian Rhapsody";
+musica2.Duracao = 354;
+musica2.Genero = generoMusica2;
+
 
 albunDoQueen.AdicionarMusica(musica1);
 albunDoQueen.AdicionarMusica(musica2);
+
+albunDoQueen.ExibirMusicaDoAlbun();

@@ -7,6 +7,8 @@ class Musica
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }
 
+    public Genero  Genero { get; set; }
+
     public string DescricaoResumida => $"A musica {Nome} pertence ao {Artista}";
  
 
@@ -16,6 +18,7 @@ class Musica
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
         Console.WriteLine($"Duracao: {Duracao}");
+        Console.WriteLine($"Genero: {Genero}");
         if (Disponivel)
         {
             Console.WriteLine("Disponivel no plano");
