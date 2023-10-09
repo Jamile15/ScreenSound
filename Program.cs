@@ -6,7 +6,7 @@
 //musica1.Artista = "The Police";
 //musica1.Duracao = 273;
 //musica1.Disponivel=(true);
- //Console.WriteLine(musica1.DescricaoResumida);
+//Console.WriteLine(musica1.DescricaoResumida);
 
 
 //Musica musica2 = new Musica();
@@ -14,17 +14,15 @@
 //musica2.Artista = "U2";
 //musica2.Duracao = 367;
 //musica2.Disponivel=(false);
- //Console.WriteLine(musica2.DescricaoResumida);
+//Console.WriteLine(musica2.DescricaoResumida);
 
 //musica1.ExibirFichaTecnica();
 //musica2.ExibirFichaTecnica();
 //-----------------------------------------------------------------------------------------------------------------
 
-Banda queen = new Banda();
-queen.Nome = "Queen";
+Banda queen = new Banda("Queen");
 
-Albuns albunDoQueen = new Albuns();
-albunDoQueen.Nome = "A night at the opera";
+Albuns albunDoQueen = new Albuns("A night at the opera");
 
 Genero generoMusica1 = new Genero();
 generoMusica1.Nome = "Mista";
@@ -32,22 +30,31 @@ generoMusica1.Nome = "Mista";
 Genero generoMusica2 = new Genero();
 generoMusica2.Nome = "Pesada";
 
-Musica musica1 = new Musica(queen);
-musica1.Nome = "Love of my life";
-musica1.Duracao = 213;
-musica1.Genero = generoMusica1;
+Musica musica1 = new Musica(queen, "Love of my life")
+{
+    Duracao = 213,
+    Disponivel = true,
+    Genero = generoMusica1,
+
+    };
 
 
-Musica musica2 = new Musica(queen);
-musica2.Nome = "Bohemian Rhapsody";
-musica2.Duracao = 354;
-musica2.Genero = generoMusica2;
+
+
+
+Musica musica2 = new Musica(queen, "Bohemian Rhapsody")
+{
+    Duracao = 350,
+    Disponivel = false,
+    Genero = generoMusica2,
+};
 
 
 albunDoQueen.AdicionarMusica(musica1);
 albunDoQueen.AdicionarMusica(musica2);
-
 albunDoQueen.ExibirMusicaDoAlbun();
 
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 queen.AdicionarAlbun(albunDoQueen);
 queen.ExibirDiscografia();
