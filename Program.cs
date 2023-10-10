@@ -19,7 +19,7 @@
 //musica1.ExibirFichaTecnica();
 //musica2.ExibirFichaTecnica();
 //-----------------------------------------------------------------------------------------------------------------
-
+/*-----------------------------------------------Banda------------------------------------------------------------------
 Banda queen = new Banda("Queen");
 
 Albuns albunDoQueen = new Albuns("A night at the opera");
@@ -58,3 +58,17 @@ musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
 queen.AdicionarAlbun(albunDoQueen);
 queen.ExibirDiscografia();
+---------------------------------------------------------------------------EPSODIOS --------------------------------------*/
+
+Episodio ep1 = new(1, "Moana", 45);
+ep1.AdicionarConvidados("Maria");
+ep1.AdicionarConvidados("João");
+
+Episodio ep2 = new(2, "Barbie", 60);
+ep1.AdicionarConvidados("Pedro");
+ep1.AdicionarConvidados("Paulo");
+
+Podcast podcast = new("Podcast especial", "Joaquin");
+podcast.AdicionarEpisodio(ep1);
+podcast.AdicionarEpisodio(ep2);
+podcast.ExibirDetalhes();
