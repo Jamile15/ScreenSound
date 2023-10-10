@@ -19,7 +19,7 @@ class Podcast
     public void ExibirDetalhes()
     {
        Console.WriteLine($"Podcast {Nome} apresentado por {Host}\n");
-       foreach (Episodio episodio in episodios)
+       foreach (Episodio episodio in episodios.OrderBy(e => e.Ordem))
        {
         Console.WriteLine(episodio.Resumo);
        };
